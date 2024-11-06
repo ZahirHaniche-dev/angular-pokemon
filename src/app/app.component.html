@@ -1,11 +1,11 @@
 <h1>Liste des Pokémons</h1>
 <input 
     #input
-    (keyup)="0"
-    type="text" 
+    (keyup)="selectPokemon(input.value)"
+    type="number" 
 />
 
-<p> {{ input.value }} </p>
+<p> {{ pokemonSelected?.name }} </p>
 
 
 <!-- <div *ngFor="let pokemon of pokemonList" (click)="selectPokemon(pokemon)">
