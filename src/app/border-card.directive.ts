@@ -10,7 +10,8 @@ export class BorderCardDirective {
     this.setBorder('#f5f5f5');
   }
 
-  @Input('pkmnBorderCard') borderColor: string;
+  @Input('pkmnBorderCard') borderColor: string; // alias
+  @Input() pkmnBorderCard: string; // alias
 
   @HostListener('mouseenter') onMouseEnter() {
     this.setBorder(this.borderColor || '#009688');
